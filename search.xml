@@ -8,15 +8,15 @@
       <link href="/post/6aaa7dce.html"/>
       <url>/post/6aaa7dce.html</url>
       
-        <content type="html"><![CDATA[<h1 id="嘻嘻嘻嘻"><a href="#嘻嘻嘻嘻" class="headerlink" title="嘻嘻嘻嘻"></a>嘻嘻嘻嘻</h1>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-创建文章"><a href="#1-创建文章" class="headerlink" title="1.创建文章"></a>1.创建文章</h2><p>在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;my-first-blog&quot;</span></span><br></pre></td></tr></table></figure><h2 id="2-编写文章（基于Markdown）"><a href="#2-编写文章（基于Markdown）" class="headerlink" title="2.编写文章（基于Markdown）"></a>2.编写文章（基于Markdown）</h2>]]></content>
       
       
-      <categories>
-          
-          <category> 分类1 </category>
-          
-      </categories>
       
+        <tags>
+            
+            <tag> 教学 </tag>
+            
+        </tags>
       
     </entry>
     
