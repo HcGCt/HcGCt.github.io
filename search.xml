@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Spring事务管理</title>
+      <link href="/post/762945f0.html"/>
+      <url>/post/762945f0.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Spring事务支持"><a href="#Spring事务支持" class="headerlink" title="Spring事务支持"></a>Spring事务支持</h1><p>Spring 支持两种事务方式，分别是<strong>编程式事务</strong>和声明式事务，后者最常见，通常情况下只需要一个 @Transactional 就搞定了（代码侵入性降到了最低）</p><h2 id="编程式事务"><a href="#编程式事务" class="headerlink" title="编程式事务"></a>编程式事务</h2><p>编程式事务是指将事务管理代码嵌入嵌入到业务代码中，来控制事务的提交和回滚。例如使用 TransactionTemplate 来管理事务：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> TransactionTemplate transactionTemplate;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span> &#123;</span><br><span class="line">    transactionTemplate.execute(<span class="keyword">new</span> <span class="title class_">TransactionCallbackWithoutResult</span>() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doInTransactionWithoutResult</span><span class="params">(TransactionStatus transactionStatus)</span> &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">                <span class="comment">// ....  业务代码</span></span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">                <span class="comment">//回滚</span></span><br><span class="line">                transactionStatus.setRollbackOnly();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> spring </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Springboot集成minIO及文件上传</title>
       <link href="/post/e83dca1.html"/>
       <url>/post/e83dca1.html</url>
